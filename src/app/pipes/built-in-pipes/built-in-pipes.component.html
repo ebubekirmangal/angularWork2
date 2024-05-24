@@ -1,0 +1,21 @@
+<h2 class="text-center">Headers</h2>
+@for (header of headers; track $index) {
+    <h3>{{header | titlecase}}</h3>
+}
+
+<h1 class="text-center">Products</h1>
+<table style="margin: 0 auto; width: 300px;">
+    <thead>
+        <tr><th>Product</th>
+        <th>Price</th></tr>
+    </thead>
+    <tbody>
+ @for (item of products; track $index) {
+    <tr>
+        <td class="py-3" style="border: 1px solid black;text-indent: 8px;">{{item.name}}</td>
+        <td style="border: 1px solid black;text-indent: 8px;">{{item.unitPrice | currency}}</td>
+    </tr>
+}   
+</tbody>
+</table>
+

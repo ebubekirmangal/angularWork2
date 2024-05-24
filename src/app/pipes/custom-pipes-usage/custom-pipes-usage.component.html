@@ -1,0 +1,26 @@
+<div class="form" style="margin: 50px auto 0 auto; border: 1px solid black;padding: 15px; width: 300px;box-shadow: 0 0 10px black;border-radius: 10px;" [formGroup]="form">
+    <h3 class="text-center">Login</h3>
+  <form (submit)="viewForm()">
+
+<div class="mail" style="margin: 0 auto; width: 250px;">
+    <label for="email">Email</label><br>
+    <input type="email" formControlName="email" id="email" style="width: 250px;">
+</div>
+@if (form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)) {
+    <div style="background-color: pink; border: 1px solid red;width: 250px;padding: 3px; margin: 5px auto 0 auto;">{{form.get('email') | formControlErrorMessage}}</div>
+}
+<br>
+<div class="password"  style="margin: 0 auto; width: 250px;">
+<label for="password">Password</label><br>
+<input type="password" id="password" formControlName="password" style="width: 250px;"> <br>
+<small>password length is between 4 and 8</small>    
+</div>
+@if (form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)) {
+    <div style="background-color: pink; border: 1px solid red;width: 250px;padding: 3px; margin: 5px auto 0 auto;">{{form.get('password') | formControlErrorMessage}}</div>
+}
+<div class="submit"  style="margin: 0 auto;width: max-content; margin-top: 20px;">
+    <input type="submit" class="btn btn-primary">
+</div>
+
+</form>  
+</div>
