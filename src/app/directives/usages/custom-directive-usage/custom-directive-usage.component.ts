@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './custom-directive-usage.component.html',
   styles: `.app-button{
-    backgroundColor:white;
+    background-color:white;
     border:1px solid blue;
     color: blue;
   }`
