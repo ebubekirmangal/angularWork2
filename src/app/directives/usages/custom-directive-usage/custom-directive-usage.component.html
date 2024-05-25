@@ -1,8 +1,14 @@
-<h3>appButton</h3>
-<button appButton>Button</button>
-<h3>appNoCharacterInput</h3>
-<input type="text" appNoCharacterInput [(ngModel)] ="value">
-<h3>appMultiple</h3>
-
-<div *appMultiple = "5" style="background-color: blue; padding: 10px; width: 200px;
-border: 2px solid white; color: white; font-weight: bolder;" >Blue x5</div>
+<div class="main">
+    <h3>appButton</h3>
+    <button appButton>Button</button>
+    <h3>appNoCharacterInput</h3>
+    <input type="text" appNoCharacterInput [(ngModel)] ="value">
+    <h3>appMultiple</h3>
+    
+    <div *appMultiple = "5" style="background-color: blue; padding: 10px; width: 200px;
+    border: 2px solid white; color: white; font-weight: bolder;" >Blue x5</div>
+    
+    <h3>appWelcome</h3>
+    <div *appWelcome="5000" style="background-color: aqua; color: white;border: 1px solid rgb(0, 60, 255); padding: 20px; font-weight: 700; text-shadow: 2px 2px 2px black;border-radius: 70px;width:80%;"> 
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis hic ipsum velit a aliquam deleniti dolore ab delectus? Iure, repellat?</div>
+</div>
